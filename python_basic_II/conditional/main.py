@@ -42,3 +42,11 @@ count = 0
 for item in my_list:
     count += item
 print(count)
+
+
+for i, char in enumerate("Ousmane Diallo"):
+    print(i, char)
+
+for i, char in enumerate(list(range(100))):
+    if i == 50:
+        print("You're 50th", i, char)
