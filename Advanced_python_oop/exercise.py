@@ -1,205 +1,208 @@
-# Grocery List Manager
-# Create a list of grocery items.
+# # Grocery List Manager
+# # Create a list of grocery items.
+# #
+# # Add 3 items
+# #
+# # Remove 1 item
+# #
+# # Print the final list
 #
-# Add 3 items
+# grocery_cart = ["Banna", "Tuna cane", "Sugar"]
+# grocery_cart.append('Orange')
+# grocery_cart.append('Sardine cane')
+# grocery_cart.append('Bread')
+# print(grocery_cart)
+# grocery_cart.remove('Sugar')
+# print(grocery_cart)
 #
-# Remove 1 item
 #
-# Print the final list
-
-grocery_cart = ["Banna", "Tuna cane", "Sugar"]
-grocery_cart.append('Orange')
-grocery_cart.append('Sardine cane')
-grocery_cart.append('Bread')
-print(grocery_cart)
-grocery_cart.remove('Sugar')
-print(grocery_cart)
-
-
-
-# Daily Temperatures
-# Store daily temperatures in a list.
 #
-# Find the highest temperature
+# # Daily Temperatures
+# # Store daily temperatures in a list.
+# #
+# # Find the highest temperature
+# #
+# # Find the lowest temperature
+# #
+# # Calculate the average
 #
-# Find the lowest temperature
+# daily_temperature = [20, 40, 12]
 #
-# Calculate the average
-
-daily_temperature = [20, 40, 12]
-
-def find_highest_temperature(temperature_list):
-    highest_temp = max(temperature_list)
-    return highest_temp
-def find_lowest_temperature(temperature_list):
-    lowest_temp = min(temperature_list)
-    return lowest_temp
-def calculate_average(temperature_list):
-    average = sum(temperature_list) / len(temperature_list)
-    return average
-print(find_highest_temperature(daily_temperature))
-print(find_lowest_temperature(daily_temperature))
-print(calculate_average(daily_temperature))
-
-
-# Dictionary-Based Problems
+# def find_highest_temperature(temperature_list):
+#     highest_temp = max(temperature_list)
+#     return highest_temp
+# def find_lowest_temperature(temperature_list):
+#     lowest_temp = min(temperature_list)
+#     return lowest_temp
+# def calculate_average(temperature_list):
+#     average = sum(temperature_list) / len(temperature_list)
+#     return average
+# print(find_highest_temperature(daily_temperature))
+# print(find_lowest_temperature(daily_temperature))
+# print(calculate_average(daily_temperature))
 #
-# Phone Book
-# Create a dictionary with names as keys and phone numbers as values.
 #
-# Add 3 contacts
+# # Dictionary-Based Problems
+# #
+# # Phone Book
+# # Create a dictionary with names as keys and phone numbers as values.
+# #
+# # Add 3 contacts
+# #
+# # Search for a contact
+# #
+# # Delete a contact
 #
-# Search for a contact
+# phone_book = {
+#     "user1": {
+#         "name": "Samba",
+#         "phone": 34574672
+#     },
+#     "user2": {
+#         "name": "Vieux",
+#         "phone": 345746363
+#     }
+# }
 #
-# Delete a contact
-
-phone_book = {
-    "user1": {
-        "name": "Samba",
-        "phone": 34574672
-    },
-    "user2": {
-        "name": "Vieux",
-        "phone": 345746363
-    }
-}
-
-phone_book.update({
-    "user3": {
-        "name": "Grand Hacko",
-        "phone": 3457466352
-    },
-    "user4": {
-        "name": "Sidy Hacko",
-        "phone": 3457466362
-    },
-    "user5": {
-        "name": "Sidy Hacko",
-        "phone": 3457466334
-    }
-})
-
-for item in phone_book:
-    print(phone_book[item]["name"],phone_book[item]["phone"])
-
-
-# Student Grades
-# Store student names and their grades in a dictionary.
+# phone_book.update({
+#     "user3": {
+#         "name": "Grand Hacko",
+#         "phone": 3457466352
+#     },
+#     "user4": {
+#         "name": "Sidy Hacko",
+#         "phone": 3457466362
+#     },
+#     "user5": {
+#         "name": "Sidy Hacko",
+#         "phone": 3457466334
+#     }
+# })
 #
-# Find the average grade
+# for item in phone_book:
+#     print(phone_book[item]["name"],phone_book[item]["phone"])
 #
-# Print students who scored above 80
-
-student_grades = {
-    "user1": {
-        "name": "Samba",
-        "grade": [50, 60, 75, 80, 90]
-    },
-    "user2": {
-        "name": "Vieux",
-        "grade": [50, 60, 15, 80, 90]
-    }
-}
-
-# Add new grade
-student_grades["user2"]["grade"].append(100)
-
-print(student_grades)
-
-def calculate_average():
-    grades = student_grades["user2"]["grade"]
-    average = sum(grades) / len(grades)
-    return average
-
-print(calculate_average())
-
-
-
-# Bank Account System
-# Create a class BankAccount with:
 #
-# Attributes: name, balance
+# # Student Grades
+# # Store student names and their grades in a dictionary.
+# #
+# # Find the average grade
+# #
+# # Print students who scored above 80
 #
-# Methods: deposit(), withdraw(), show_balance()
-
-class BankAccount:
-    def __init__(self, name, balance):
-        self.name = name
-        self.balance = balance
-
-    def deposit(self, amount):
-        if amount < 1:
-            print("Please enter a positive amount")
-        else:
-            self.balance += amount
-
-    def withdraw(self, amount):
-        if amount < 1:
-            print("Please enter a positive amount")
-        elif amount > self.balance:
-            print("You don't have enough money. Please deposit before you withdraw")
-        else:
-            self.balance -= amount
-    def show_balance(self):
-        print(self.balance)
-
-
-account1 = BankAccount("Ousmane", 500)
-
-
-
-account1.show_balance()
-account1.deposit(200)
-account1.withdraw(400)
-account1.show_balance()
-
-
-# Car Rental System
-# Create a class Car with:
+# student_grades = {
+#     "user1": {
+#         "name": "Samba",
+#         "grade": [50, 60, 75, 80, 90]
+#     },
+#     "user2": {
+#         "name": "Vieux",
+#         "grade": [50, 60, 15, 80, 90]
+#     }
+# }
 #
-# Attributes: model, price_per_day
+# # Add new grade
+# student_grades["user2"]["grade"].append(100)
 #
-# Method: calculate_rental(days)
-
-class Car:
-    def __init__(self, model, price_per_day):
-        self.model = model
-        self.price_per_day = price_per_day
-    def calculate_rental(self, days):
-        total_rental = self.price_per_day * days
-        return total_rental
-
-
-customer1 = Car("Mercedes", 2000)
-
-print(customer1.model)
-
-days = 3
-total_cost = customer1.calculate_rental(days)
-
-print(f"Total cost for {days} days: ${total_cost}")
-
-
-# Student Management System
-# Create a class Student with:
+# print(student_grades)
 #
-# Attributes: name, age, grades (list)
+# def calculate_average():
+#     grades = student_grades["user2"]["grade"]
+#     average = sum(grades) / len(grades)
+#     return average
 #
-# Methods: add_grade(), average_grade()
+# print(calculate_average())
+#
+#
+#
+# # Bank Account System
+# # Create a class BankAccount with:
+# #
+# # Attributes: name, balance
+# #
+# # Methods: deposit(), withdraw(), show_balance()
+#
+# class BankAccount:
+#     def __init__(self, name, balance):
+#         self.name = name
+#         self.balance = balance
+#
+#     def deposit(self, amount):
+#         if amount < 1:
+#             print("Please enter a positive amount")
+#         else:
+#             self.balance += amount
+#
+#     def withdraw(self, amount):
+#         if amount < 1:
+#             print("Please enter a positive amount")
+#         elif amount > self.balance:
+#             print("You don't have enough money. Please deposit before you withdraw")
+#         else:
+#             self.balance -= amount
+#     def show_balance(self):
+#         print(self.balance)
+#
+#
+# account1 = BankAccount("Ousmane", 500)
+#
+#
+#
+# account1.show_balance()
+# account1.deposit(200)
+# account1.withdraw(400)
+# account1.show_balance()
+#
+#
+# # Car Rental System
+# # Create a class Car with:
+# #
+# # Attributes: model, price_per_day
+# #
+# # Method: calculate_rental(days)
+#
+# class Car:
+#     def __init__(self, model, price_per_day):
+#         self.model = model
+#         self.price_per_day = price_per_day
+#     def calculate_rental(self, days):
+#         total_rental = self.price_per_day * days
+#         return total_rental
+#
+#
+# customer1 = Car("Mercedes", 2000)
+#
+# print(customer1.model)
+#
+# days = 3
+# total_cost = customer1.calculate_rental(days)
+#
+# print(f"Total cost for {days} days: ${total_cost}")
+#
+#
+# # Student Management System
+# # Create a class Student with:
+# #
+# # Attributes: name, age, grades (list)
+# #
+# # Methods: add_grade(), average_grade()
+#
+# class Student:
+#     def __init__(self, name, age, grades):
+#         self.name = name
+#         self.age = age
+#         self.grades = grades
+#
+#     def add_grade(self, grade):
+#         self.grades.append(grade)
+#
+#     def average_grade(self):
+#         return sum(self.grades) / len(self.grades)
+#
+#
+# student1 = Student("Ousmane", 20, [50, 60, 75, 80, 90])
+#
+# print(student1.average_grade())
 
-class Student:
-    def __init__(self, name, age, grades):
-        self.name = name
-        self.age = age
-        self.grades = grades
+#Inheritence
 
-    def add_grade(self, grade):
-        self.grades.append(grade)
-
-    def average_grade(self):
-        return sum(self.grades) / len(self.grades)
-
-
-student1 = Student("Ousmane", 20, [50, 60, 75, 80, 90])
-
-print(student1.average_grade())
