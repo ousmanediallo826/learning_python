@@ -206,3 +206,120 @@
 
 #Inheritence
 
+# To-Do App
+#
+# Create a class Task with:
+#
+# Attributes: title, completed
+#
+# Methods: mark_complete(), show_status()
+
+# class ToDoApp:
+#     def __init__(self, title, description):
+#         self.title = title
+#         self.description = description
+#         self.completed = False
+#
+#     def mark_completed(self):
+#         self.completed = False
+#
+#     def show_status(self):
+#         status = "Completed ✅" if self.completed else "Pending ⏳"
+#         return f"Task: {self.title}\nDescription: {self.description}\nStatus: {status}"
+#
+# task1 = ToDoApp("Learning OOP", "I am learning the four pillars of OOP")
+#
+# print(task1.show_status())
+#
+# task1.mark_completed()
+#
+# print("\nAfter completing task:\n")
+# print(task1.show_status())
+
+
+# 6. Library System
+#
+# Create:
+#
+# Book class → title, author, available
+#
+# Library class → borrow_book(), return_book()
+
+# class Library:
+#     def __init__(self, title, author, available):
+#         self.title = title
+#         self.author = author
+#         self.available = available
+#
+#     def borrow_book(self):
+#         if self.available:
+#             borrowed_book = self.title, self.author
+#             return f"your borrowed book is {borrowed_book}"
+#         else:
+#             print("the book is not available")
+#     def return_book(self):
+#         self.available = True
+#
+#
+# Book = Library("True master", "Ousmane", False)
+# Book.borrow_book()
+# Book.return_book()
+# print(Book.available)
+# print(Book.borrow_book())
+# print(Book.return_book())
+#
+
+# School Management System
+#
+# Create:
+#
+# Teacher class
+#
+# Student class
+#
+# Classroom class
+# With:
+#
+# Add students
+#
+# Assign teacher
+#
+# Print class summary
+
+class School:
+    def __init__(self, name):
+        self.name = name
+        self.students = []
+        self.teachers = []
+
+    def add_student(self, student):
+        self.students.append(student)
+
+    def add_teacher(self, teacher):
+        self.teachers.append(teacher)
+
+    def show_summary(self):
+        print(f"School: {self.name}")
+        print("Students:")
+        for s in self.students:
+            print(f" - {s.name}, Grade: {s.grade}")
+        print("Teachers:")
+        for t in self.teachers:
+            print(f" - {t.name}, Subject: {t.subject}")
+
+
+s1 = Student("Ousmane", "10th")
+s2 = Student("Samba", "11th")
+
+t1 = Teacher("Mr. John", "Math")
+t2 = Teacher("Ms. Anna", "Science")
+
+school = School("Hoboken High School")
+
+school.add_student(s1)
+school.add_student(s2)
+
+school.add_teacher(t1)
+school.add_teacher(t2)
+
+school.show_summary()
