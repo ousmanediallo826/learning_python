@@ -323,3 +323,29 @@ school.add_teacher(t1)
 school.add_teacher(t2)
 
 school.show_summary()
+
+# 🏆 Final Challenge (Real-World Mini Project)
+# Car Rental Management System
+#
+# Features:
+#
+# Multiple cars
+#
+# Multiple customers
+#
+# Rent & return cars
+#
+# Total revenue tracking
+
+class CarRentalManagement:
+    def __init__(self, revenue, rent, returns, cars, customers):
+        self.revenue = revenue
+        self.rent = rent
+        self.returns = returns
+        self.cars = cars
+        self.customers = customers
+
+    def cars_rent(self):
+        pass
+
+
