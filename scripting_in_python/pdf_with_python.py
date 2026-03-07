@@ -1,0 +1,6 @@
+from PyPDF2 import PdfReader
+
+with open("./pdf/CLUB Tiers.pdf", "rb") as pdf_file:
+    pdf_reader = PdfReader(pdf_file)
+    page = pdf_reader.pages[0]
+    print(page.extract_text())
